@@ -9,8 +9,6 @@ export default function ExtensionsControllers({
   updateStatusController,
   statusController,
 }: Props) {
-  const buttonClass =
-    " cursor-pointer text-[0.9rem] md:text-[1rem] font-medium shadow shadow-primary-Neutral-200 dark:bg-primary-Neutral-700 dark:text-primary-Neutral-0 dark:hover:bg-primary-Neutral-600 dark:hover:text-primary-Neutral-0  dark:shadow-none    bg-primary-Neutral-0 px-3.5 md:px-5 flex justify-center items-center py-1.5 md:py-2.5 rounded-3xl";
   const filters = [
     { label: "All", value: null },
     { label: "Active", value: true },
