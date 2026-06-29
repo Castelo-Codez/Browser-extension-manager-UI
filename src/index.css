@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+:root {
+  --primary-light-gradient: linear-gradient(180deg, #ebf2fc 0%, #eef8f9 100%);
+  --primary-Dark-Gradient: linear-gradient(180deg, #040918 0%, #091540 100%);
+}
+
+@utility container {
+  margin-inline: auto;
+  padding-inline: 1rem;
+  @apply px-3.5 sm:px-0;
+  @media (width >= 576px) {
+    max-width: 540px;
+  }
+
+  @media (width >= 768px) {
+    max-width: 720px;
+  }
+
+  @media (width >= 992px) {
+    max-width: 960px;
+  }
+
+  @media (width >= 1200px) {
+    max-width: 1140px;
+  }
+
+  @media (width >= 1400px) {
+    max-width: 1320px;
+  }
+}
+@custom-variant dark (&:where(.dark, .dark *));
+@theme {
+  --color-primary-Neutral-900: hsl(227, 75%, 14%);
+  --color-primary-Neutral-800: hsl(226, 25%, 17%);
+  --color-primary-Neutral-700: hsl(225, 23%, 24%);
+  --color-primary-Neutral-600: hsl(226, 11%, 37%);
+  --color-primary-Neutral-300: hsl(0, 0%, 78%);
+  --color-primary-Neutral-200: hsl(217, 61%, 90%);
+  --color-primary-Neutral-100: hsl(0, 0%, 93%);
+  --color-primary-Neutral-0: hsl(200, 60%, 99%);
+  --color-primary-Red-400: hsl(3, 86%, 64%);
+  --color-primary-Red-500: hsl(3, 71%, 56%);
+  --color-primary-Red-700: hsl(3, 77%, 44%);
+}
+
+@layer base {
+  @font-face {
+    font-family: "noto-sans", sans-serif;
+    src: url("/fonts/NotoSans-VariableFont_wdth,wght.ttf") format("truetype");
+    font-weight: 100 900;
+    font-display: swap;
+  }
+  body {
+    font-family: "noto-sans", sans-serif;
+    background: var(--primary-light-gradient);
+  }
+  .dark {
+    body {
+      background-image: var(--primary-Dark-Gradient);
+    }
+  }
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px 10px;
+  }
+}
